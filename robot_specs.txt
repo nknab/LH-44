@@ -1,0 +1,33 @@
+LH44 Length = 37.0cm                l
+LH44 Front Width = 16.5cm           fw
+LH44 Rear Width = 17.0cm            rw
+
+LH44 Front Overhang =               fo
+LH44 Rear Overhang =                ro
+
+LH44 Height = 11.0cm                h
+
+LH44 Wheel Radius =                 r
+
+LH44 Max Steering Angle =           a
+Time Step = 30.0cm
+
+
+Parking Space Parameters
+
+Left Front Endpoint = (,)
+Right Front Endpoint = (,)
+
+Left Rear Endpoint = (,)
+Right Rear Endpoint = (,)
+
+
+Minimum Space Needed = LH44 Length + sqrt((
+
+l_1 = 41.0
+w = 17.00
+k = 6.30
+l_2 = 31.20
+r = 55.70
+space = l_1 + (sqrt((pow(r, 2) - pow(l_2, 2)) + pow((l_2 + k), 2) - pow((sqrt(pow(r, 2) - pow(l_2, 2)) - w), 2) - l_2 - k))
+print(space)
