@@ -48,8 +48,14 @@ class FeedbackControl:
     @:parameter target_value, value, kp, ki, kd, previous_error, integral
     @:return pid
     """
-    def pid_control(self, target_value, value, kp, ki, kd, previous_error, integral):
+    def pid_control(self, target_value, value, kp, ki, kd, previous_error, integral, offset):
         pd = self.pd_control(target_value, value, kp, kd, previous_error)
         i = integral * ki
         pid = pd + i
+        if pid > 0:
+            pid += abs(offset)
+        elif pid == 0:
+            pid += abs(offset)
+        elif pid < 0:
+            pid += offset
         return pid

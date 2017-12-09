@@ -13,21 +13,11 @@ LH44 Max Steering Angle =           a
 Time Step = 30.0cm
 
 
-Parking Space Parameters
 
-Left Front Endpoint = (,)
-Right Front Endpoint = (,)
-
-Left Rear Endpoint = (,)
-Right Rear Endpoint = (,)
-
-
-Minimum Space Needed = LH44 Length + sqrt((
-
-l_1 = 41.0
+l_1 = 42.4
 w = 17.00
-k = 6.30
-l_2 = 31.20
-r = 55.70
-space = l_1 + (sqrt((pow(r, 2) - pow(l_2, 2)) + pow((l_2 + k), 2) - pow((sqrt(pow(r, 2) - pow(l_2, 2)) - w), 2) - l_2 - k))
-print(space)
+k = 6.10
+l_2 = 32.20
+r = 50.70
+Minimum Space Needed = (sqrt((pow(r, 2) - pow(l_2, 2)) + pow((l_2 + k), 2) - pow((sqrt(pow(r, 2) - pow(l_2, 2)) - w), 2) - l_2 - k))
+

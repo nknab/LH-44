@@ -37,9 +37,18 @@ class Movement:
     """
     This method is for steering the LH44.
     
+    @:parameter speed
+    """
+    def steering(self, speed=0):
+        spd = self.speed_limit_check(speed)
+        self.front_motor.run_forever(speed_sp=spd)
+
+    """
+    This method is for steering the LH44.
+
     @:parameter speed, angle
     """
-    def steering(self, speed=0, angle=0):
+    def steering_rel(self, speed=0, angle=0):
         spd = self.speed_limit_check(speed)
         self.front_motor.run_to_rel_pos(position_sp=angle, speed_sp=spd, stop_action="brake")
         self.front_motor.wait_while('running')
